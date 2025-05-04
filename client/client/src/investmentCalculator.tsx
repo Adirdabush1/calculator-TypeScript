@@ -104,19 +104,20 @@ const InvestmentCalculator: React.FC = () => {
         <button type="submit" className="submit">Calculate</button>
       </form>
 
-      {results && typeof results !== 'string' && (
-        <div className="mt-6 text-white">
-          <h3 className="font-semibold text-lg mb-2">Results:</h3>
-          {results.map((res: InvestmentResult) => (
-            <div key={res.year} className="border-b py-2">
-              <p>Year: {res.year}</p>
-              <p>Total: {res.totalAmount.toFixed(2)}</p>
-              <p>Contributions: {res.totalContributions.toFixed(2)}</p>
-              <p>Interest Earned: {res.totalInterestEarned.toFixed(2)}</p>
-            </div>
-          ))}
-        </div>
-      )}
+    {results && typeof results !== 'string' && (
+      <div className="results-container">
+        <h3 className="results-title">Results:</h3>
+        {results.map((res: InvestmentResult) => (
+          <div key={res.year} className="result-card">
+            <p><strong>Year:</strong> {res.year}</p>
+            <p><strong>Total:</strong> ${res.totalAmount.toFixed(2)}</p>
+            <p><strong>Contributions:</strong> ${res.totalContributions.toFixed(2)}</p>
+            <p><strong>Interest Earned:</strong> ${res.totalInterestEarned.toFixed(2)}</p>
+          </div>
+        ))}
+      </div>
+    )}
+    
 
       {typeof results === 'string' && (
         <p className="text-red-600 mt-4">{results}</p>

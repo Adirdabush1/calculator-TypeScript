@@ -1,6 +1,6 @@
 body {
   align-items: center;
-  background-color: #686868;
+  background-color: #000000;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -121,4 +121,40 @@ body {
 
 .submit:active {
   background-color: #06b;
+}
+
+.results-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #1f1f2e;
+  border-radius: 12px;
+  color: #eee;
+  font-family: sans-serif;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.results-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #00bcd4;
+}
+
+.result-card {
+  background-color: #2e2e48;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.result-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.result-card p strong {
+  color: #ffd369;
 }
